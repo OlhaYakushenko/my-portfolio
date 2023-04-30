@@ -1,0 +1,27 @@
+$listMain: #BCE5F9, #BBDEF4, #C0DDEF, #BFDAED, #BBDCEF, #BBDDF2;
+
+/*color for gradient*/
+@mixin gradient($direction, $list) {
+    background: -webkit-linear-gradient($direction, $list);
+    /*$direction - top, bottom, left,right*/
+    background: -moz-linear-gradient($direction, $list);
+    background: -o-linear-gradient($direction, $list);
+    background: linear-gradient($direction, $list);
+}
+
+// @mixin imageGradient(){
+
+// }
+@mixin before_circle {
+    &:before {
+        content: '';
+        position: absolute;
+        width: 36px;
+        height: 36px;
+        background: $main-color;
+        border-radius: 100%;
+        top: -25%;
+        left: 0;
+        z-index: -1;
+    }
+}
